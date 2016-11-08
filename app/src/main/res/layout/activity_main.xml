@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context="com.example.magneta94.doodle.MainActivity">
+
+
+
+
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorBar"
+        android:max="100"
+        android:layout_below="@+id/clearB"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sizeBar"
+        android:max="30"
+        android:layout_alignLeft="@+id/colorBar"
+        android:layout_alignStart="@+id/colorBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/sizeText" />
+
+    <TextView
+        android:text="Color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorText"
+        android:layout_below="@+id/clearB"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/doodleC" />
+
+    <com.example.magneta94.doodle.DoodleView
+        android:layout_width="243dp"
+        android:layout_height="match_parent"
+        android:id="@+id/doodleC"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="ClEAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearB"
+        android:layout_weight="0.12"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC" />
+
+    <TextView
+        android:text="Size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sizeText"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/colorBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC" />
+
+    <TextView
+        android:text="Opacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/opText"
+        android:layout_below="@+id/sizeBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/opBar"
+        android:max="255"
+        android:layout_below="@+id/opText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opBar"
+        android:layout_toRightOf="@+id/doodleC"
+        android:id="@+id/toggleButton2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textOff="Stroke"
+        android:textOn="Fill"
+        android:checked="false" />
+
+    <TextView
+        android:text="Background Color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton2"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC"
+        android:layout_marginTop="13dp"
+        android:id="@+id/backgroundColor" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/backgroundColor"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_toEndOf="@+id/doodleC">
+
+    <RadioButton
+        android:text="White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/whitec"
+        android:layout_below="@+id/blueC"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRadioButtonClicked"/>/>
+
+
+    <RadioButton
+        android:text="Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blueC"
+        android:layout_below="@+id/greenC"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:text="Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greenC"
+        android:layout_below="@+id/Red"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRadioButtonClicked"/>/>
+
+    <RadioButton
+        android:text="Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Red"
+        android:layout_below="@+id/backgroundColor"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:text="Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blackC"
+        android:layout_below="@+id/whitec"
+        android:layout_toRightOf="@+id/doodleC"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+</RelativeLayout>
